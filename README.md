@@ -4,6 +4,12 @@ A React Native delivery driver app built with Expo and Firebase. Drivers can log
 
 ---
 
+## Demo
+
+<video src="screen-20260320-022626.mp4" controls width="320"></video>
+
+---
+
 ## Tech Stack
 
 - **React Native** (Expo SDK 55, Managed Workflow)
