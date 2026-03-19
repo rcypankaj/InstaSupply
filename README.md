@@ -6,7 +6,8 @@ A React Native delivery driver app built with Expo and Firebase. Drivers can log
 
 ## Demo
 
-<video src="screen-20260320-022626.mp4" controls width="320"></video>
+A screen recording of the app is included in this repository.
+[**Download / view the demo video → `screen-20260320-022626.mp4`**](screen-20260320-022626.mp4)
 
 ---
 
