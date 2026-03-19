@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Deliveries: a driver can only read/write their own assigned deliveries
+    match /deliveries/{deliveryId} {
+      allow read: if request.auth != null
+        && request.auth.uid == resource.data.assignedDriverUid;
+      allow update: if request.auth != null
+        && request.auth.uid == resource.data.assignedDriverUid
+        && request.resource.data.assignedDriverUid == resource.data.assignedDriverUid;
+      // Only Cloud Functions (admin SDK) can create new deliveries
+      allow create: if false;
+      allow delete: if false;
+    }
+
+    // Users: each driver can only read/write their own document (FCM token storage)
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}

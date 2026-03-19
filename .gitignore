@@ -31,7 +31,24 @@ yarn-error.*
 *.pem
 
 # local env files
+.env
 .env*.local
+
+# Firebase credentials — NEVER commit these
+google-services.json
+GoogleService-Info.plist
+scripts/serviceAccountKey.json
+
+# Build artifacts
+*.apk
+*.aab
+*.ipa
+
+# Firebase build artifacts
+functions/node_modules/
+functions/lib/
+.firebase/
+firebase-debug.log
 
 # typescript
 *.tsbuildinfo
